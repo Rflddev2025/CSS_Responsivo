@@ -1,0 +1,151 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #bd9292;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #ce2323;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sobre-loja {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sobre-loja .imagem-loja img {
+    max-width: 100%;
+    height: auto;
+    
+    border-radius: 10px;
+}
+
+.sobre-loja .texto-loja {
+    max-width: 500px;
+}
+
+.produtos {
+    padding: 20px;
+    text-align: center;
+}
+
+.produtos h2 {
+    margin-bottom: 20px;
+}
+
+.lista-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.produto {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.produto h3 {
+    margin: 10px 0;
+}
+
+.produto p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.produto button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.produto button:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #8b6767;
+    color: #130808;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media  screen and (max-width: 640px) {
+    .sobre-loja {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-loja .imagem-loja,
+    .sobre-loja .texto-loja {
+        max-width: 100%;
+    }
+
+    .produtos {
+        display: block;
+    }
+}
+
+@media screen  and (min-width: 641px) and (max-width: 1023px) {
+    .header {
+        max-width: 90%;
+    }
+
+    .sobre-loja {
+        font-size: 1.5em;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, 49%);
+    }
+}
+
+
